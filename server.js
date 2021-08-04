@@ -44,25 +44,7 @@ app.get('/', (req, res) => {
   app.get("/authors/:id/" , (req , res) => { 
       let id = req.params.id ; 
       res.send(authors[id - 1].name)
-      console.log("get /authors/:id/ id :",id) 
-  
-    // console.log(authors[id].name)
-      })
-
-//   app.get("/authors/2/", (req , res) => {
-//       res.send("William Shakespeare , UK")
-//   })
-
-//   app.get("/authors/3/" , (req , res)=>{
-//       res.send("Charles Dickens , US")
-//   })
-
-//   app.get("/authors/4/" , (req , res) =>{
-//       res.send("Oscar Wilde , UK")
-//   })
-
-
-
+      console.log("get /authors/:id/ id :",id)  
 
 // EXERCICE 2
 
@@ -79,3 +61,8 @@ app.get('/', (req, res) => {
 //   app.get("/authors/4/books/" , (req , res) =>{
 //     res.send("The Picture of Dorian Gray, The Importance of Being Earnest")
 // })
+
+app.get("/authors/:books/" , (req , res) => { 
+    let id = req.params.id ; 
+    res.send(authors[id - 1].books)
+})
